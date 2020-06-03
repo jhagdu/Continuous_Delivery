@@ -2,6 +2,6 @@ FROM jhagdu/centos_httpd_php:1.0
 
 ADD webapp.* /var/www/html/
 
-EXPOSE 80
+CMD /usr/sbin/httpd -DFOREGROUND && /bin/bash
 
-CMD /bin/bash
+EXPOSE 80
